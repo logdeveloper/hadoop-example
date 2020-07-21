@@ -1,4 +1,4 @@
-package chapter53;
+package common;
 
 import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
 import org.apache.hadoop.io.Text;

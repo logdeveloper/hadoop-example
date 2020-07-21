@@ -1,11 +1,12 @@
-package chapter53;
+package chapter5.example3;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.mapred.JobConf;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 
 /**
@@ -30,6 +31,11 @@ public class DepartureDelayCount {
         job.setJarByClass(DepartureDelayCount.class);
         job.setMapperClass(DepartureDelayCountMapper.class);
         job.setReducerClass(DelayCountReducer.class);
+
+        job.setInputFormatClass(TextInputFormat.class);
+        job.setOutputKeyClass(TextOutputFormat.class);
+
+        job.waitForCompletion(true);
 
     }
 }

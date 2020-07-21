@@ -1,4 +1,4 @@
-package chapter53;
+package chapter5.example3;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
