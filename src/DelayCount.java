@@ -9,29 +9,30 @@ import org.apache.hadoop.util.GenericOptionsParser;
  */
 public class DelayCount {
 
-    public int run(String[] args) throws Exception{
-        String[] otherArgs = new GenericOptionsParser(
-                getConf(),args).getRemainingArgs();
+    public int run(String[] args){
+//        String[] otherArgs = new GenericOptionsParser(
+//                getConf(),args).getRemainingArgs();
+//
+//        if(otherArgs.length != 2){
+//            System.err.println("Usage_log : DelayCount <in> <out>");
+//            System.exit(2);
+//        }
 
-        if(otherArgs.length != 2){
-            System.err.println("Usage_log : DelayCount <in> <out>");
-            System.exit(2);
-        }
+//        Job job = new Job(getConf(), "DelayCount");
+//
+//        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
+//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
 
-        Job job = new Job(getConf(), "DelayCount");
+//        job.setJarByClass(DelayCount.class);
+//        job.setMapperClass(DelayCountMapper.class);
+//        job.setReducerClass(DelayCountReducer.class);
 
-        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
 
-        job.setJarByClass(DelayCount.class);
-        job.setMapperClass(DelayCountMapper.class);
-        job.setReducerClass(DelayCountReducer.class);
-
-        job
-
+    return 1;
 
 
     }
+
 
     public static void main(String[] args) {
 
