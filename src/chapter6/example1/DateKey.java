@@ -12,6 +12,9 @@ public class DateKey implements WritableComparable<DateKey> {
     private String year;
     private Integer month;
 
+    public DateKey() {
+    }
+
     public DateKey(String year, Integer month) {
         this.year = year;
         this.month = month;
